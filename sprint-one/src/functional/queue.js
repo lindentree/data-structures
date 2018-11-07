@@ -7,6 +7,8 @@ var Queue = function() {
   // Implement the methods below
 
   someInstance.enqueue = function(value) {
+    var x = Object.keys(storage).length;
+    storage[x] = value;
   };
 
   someInstance.dequeue = function() {

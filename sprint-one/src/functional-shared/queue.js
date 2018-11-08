@@ -28,10 +28,10 @@ var queueMethods = {
     this.position++;
   },
   dequeue: function (value) {
-  	console.log(this)
+  	
   	var idx = this.lowest 
 
-  	console.log(idx)
+  
   	var x = idx.toString();
   	
   	var popped = this[x];

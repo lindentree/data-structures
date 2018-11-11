@@ -23,6 +23,14 @@ var LinkedList = function() {
   };
 
   list.contains = function(target) {
+    if (this.head.value === target || this.tail.value === target) {
+      return true;
+    } else if (this.head.next === null || this.tail.next === null){
+        return false;   
+    } else {
+        list.contains(this.next)
+    }
+
   };
 
   return list;

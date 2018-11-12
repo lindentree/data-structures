@@ -1,18 +1,18 @@
 var Set = function() {
-  var set = Object.create(setPrototype);
-  set._storage = null; // fix me
-  return set;
+  
+  this._storage = []; // fix me
+  
 };
 
-var setPrototype = {};
 
-setPrototype.add = function(item) {
+
+Set.prototype.add = function(item) {
 };
 
-setPrototype.contains = function(item) {
+Set.prototype.contains = function(item) {
 };
 
-setPrototype.remove = function(item) {
+Set.prototype.remove = function(item) {
 };
 
 /*

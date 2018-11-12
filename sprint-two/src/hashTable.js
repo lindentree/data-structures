@@ -9,6 +9,8 @@ var HashTable = function() {
 };
 
 HashTable.prototype.insert = function(k, v) {
+  // var x = this._storage.length;
+  // console.log(x);
   var index = getIndexBelowMaxForKey(k, this._limit);
   var test = this._array;
   var retrieved = this._storage.get(index);
@@ -44,6 +46,7 @@ HashTable.prototype.retrieve = function(k) {
 };
 
 HashTable.prototype.remove = function(k) {
+  //this._limit = this._limit / 2;
   var index = getIndexBelowMaxForKey(k, this._limit);
   var removeTarget = this._storage.get(index);
   for (var i = 0; i < removeTarget.length; i++) {

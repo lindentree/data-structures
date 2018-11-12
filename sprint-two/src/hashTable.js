@@ -16,9 +16,9 @@ HashTable.prototype.insert = function(k, v) {
     for (var i = 0; i < retrieved.length; i++) {
       if (retrieved[i][0] !== k) {
         var tuple = [k, v];
-        test.push(tuple)
+        test.push(tuple);
       } else {
-        retrieved[i][1] = v
+          retrieved[i][1] = v;
       }
     }
   } else {
@@ -34,11 +34,10 @@ HashTable.prototype.retrieve = function(k) {
   var retrieved = this._storage.get(index);
 
   for (var i = 0; i < retrieved.length; i++) {
-    console.log(retrieved[i])
     if (retrieved[i][0] === k) {
       return retrieved[i][1];
     } else {
-      continue
+        continue;
     }
   }
   
@@ -51,7 +50,7 @@ HashTable.prototype.remove = function(k) {
     if (removeTarget[i][0] === k) {
       removeTarget.splice(i,1)
     } else {
-      continue
+      continue;
     }
   }
     

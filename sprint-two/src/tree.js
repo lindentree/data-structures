@@ -1,24 +1,21 @@
 //what is tree?
 var Tree = function(value) {
   var newTree = {};
-  newTree.value = value;
-  newTree.children = [];  // fix me
-  _.extend(newTree, treeMethods);
-  return newTree;
+    newTree.value = value;
+    newTree.children = [];  // fix me
+    _.extend(newTree, treeMethods);
+    return newTree;
 };
 
 var treeMethods = {};
 
 treeMethods.addChild = function(value) {
-  const node = Tree(value);
-  
+  var node = Tree(value);
   this.children.push(node);
-  console.log(this)
   
 };
 
 treeMethods.contains = function(target) {
-//console.log(this.value)
   
   for (var i = 0; i < this.children.length; i++) {
     if(this.children[i].value === target) {
@@ -32,9 +29,6 @@ treeMethods.contains = function(target) {
   } 
 
  return false;
-  
- 
-  
 };
 
 
